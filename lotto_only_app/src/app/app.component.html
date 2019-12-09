@@ -3,10 +3,30 @@
   <!--  our side menu  -->
   <ion-menu contentId="menu-content">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
+      <ion-toolbar padding>
+        <ion-avatar>
+          <img src="/assets/shapes.svg" />
+        </ion-avatar>
+        <div text-center>
+        <p>นาย โชคดี มีเงินใช้</p>
+        <p><b>ID No.</b> : TH67A0001</p>
+        </div>
+        <div text-center>
+        <p><b>ระดับ</b> : อนุบาล</p>
+        <p><b>แต้มสะสม</b></p>
+        <p><b>231 คะแนน</b></p>
+        </div>
       </ion-toolbar>
     </ion-header>
+    <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+            <ion-item [routerLink]="p.url" routerDirection="forward">
+                   {{p.title}} 
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
   </ion-menu>
 
   <!-- the main content -->

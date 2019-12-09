@@ -13,27 +13,36 @@ export class AppComponent {
 
   pages = [
     {
-      title: 'ตรวจบ้าน - คอนโด',
-      url: '/login',
-      icon: 'log-in'
+      title: 'บัญชีผู้ใช้งาน',
+      url: '/'
     },
     {
-      title: 'ตกแต่งภายใน',
+      title: 'รายการที่ชื่นชอบ',
       url: '/tabs/contact',
       icon: 'person'
     },
     {
-      title: 'จัดสวน',
+      title: 'ประวัติการซื้อ',
       url: '/tabs/about',
       icon: 'information-circle'
     },
     {
-      title: 'รับเหมาต่อเติม',
+      title: 'ตรวจรางวัล',
       url: '/tabs/about',
       icon: 'information-circle'
     },
     {
-      title: 'นานาสาระ',
+      title: 'ติดต่อแผนกบริการ',
+      url: '/app/tabs/news',
+      icon: 'information-circle'
+    },
+    {
+      title: 'เกี่ยวกับ',
+      url: '/app/tabs/news',
+      icon: 'information-circle'
+    },
+    {
+      title: 'ตั้งค่า',
       url: '/app/tabs/news',
       icon: 'information-circle'
     }

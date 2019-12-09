@@ -18,22 +18,22 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'fav',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../fav-lotto/fav-lotto.module').then(m => m.FavLottoPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'check',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../check-lotto/check-lotto.module').then(m => m.CheckLottoPageModule)
           }
         ]
       },
