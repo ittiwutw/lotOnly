@@ -1,0 +1,7 @@
+{
+  "name": "lot-only",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
