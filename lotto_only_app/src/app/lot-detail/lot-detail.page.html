@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url(../../assets/bg/Lotonly_BG.png) 0 0/100% 100% no-repeat;">
+  <h1 class="ion-padding" text-center>รายละเอียดหวย</h1>
+  <div padding text-center>
+    <img src="/assets/lotto_number.jpg" />
+  </div>
+  <ion-grid padding>
+    <ion-row text-center>
+      <ion-col size="6">
+        คนที่ถูกใจ
+      </ion-col>
+      <ion-col size="6">
+        จำนวนคงเหลือ
+      </ion-col>
+      <ion-col size="6"> <ion-icon name="heart"></ion-icon> 20 </ion-col>
+      <ion-col size="6"> <ion-icon name="copy"></ion-icon> 12 </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div padding *ngIf="!isOrder">
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      (click)="onClickOrder()"
+      >สั่งซื้อ</ion-button
+    >
+  </div>
+  <div padding *ngIf="isBuy">
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      (click)="onClickBuy()"
+      >ซื้อ</ion-button
+    >
+
+    <ion-grid padding>
+      <ion-row text-center>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label color="primary" position="floating"
+              >จำนวนที่ต้องการซื้อ
+              <ion-text color="primary">*</ion-text></ion-label
+            >
+            <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="12">
+          <ion-list>
+            <ion-radio-group>
+              <ion-list-header>
+                <ion-label>วิธีการซื้อ</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label>จัดส่ง (ค่าบริการ 10 บาท)</ion-label>
+                <ion-radio slot="start" value="biff" checked></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>จัดเก็บ</ion-label>
+                <ion-radio slot="start" value="griff"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="floating">ที่อยู่จัดส่ง</ion-label>
+            <ion-textarea rows="6"></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div padding *ngIf="isPay">
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      (click)="onClickBuy()"
+      >ราคา 80 บาท</ion-button
+    >
+
+    <ion-grid padding>
+      <ion-row text-center>
+        <ion-col size="12">
+          <ion-list>
+            <ion-radio-group>
+              <ion-list-header>
+                <ion-label>เลือกช่องทางชำระเงิน</ion-label>
+              </ion-list-header>
+              <ion-item>
+                <ion-label>ชำระผ่านบัตรเครดิต/บัตรเดบิต</ion-label>
+                <ion-radio slot="start" value="biff" checked></ion-radio>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>โอนเงินผ่านบัญชีธนาคาร</ion-label>
+                <ion-radio slot="start" value="griff"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+        </ion-col>
+        <ion-col size="12">
+          <ion-button
+            size="large"
+            type="submit"
+            expand="block"
+            color="primary"
+            (click)="onClickPay()"
+            >ชำระเงิน</ion-button
+          >
+          <p (click)="onClickEdit()"><u>แก้ไขรายละเอียด</u></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

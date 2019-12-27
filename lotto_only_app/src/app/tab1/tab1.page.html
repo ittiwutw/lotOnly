@@ -1,93 +1,109 @@
 <ion-header>
-	<ion-toolbar>
-		<ion-buttons slot="start">
-			<ion-menu-button></ion-menu-button>
-		</ion-buttons>
-		<ion-searchbar style="padding-top: 10px;"></ion-searchbar>
-	</ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
-<ion-content>
-	
-	<h1 class="ion-padding" text-center>ข่าวหวยวันนี้</h1>
-
-	<ion-slides pager>
-		<ion-slide>
-			<img src="/assets/shapes.svg" />
+<ion-content style="--background: url(../../assets/bg/Lotonly_BG.png) 0 0/100% 100% no-repeat;">
+  <ion-searchbar style="padding-top: 10px;"></ion-searchbar>
+  <h1 class="ion-padding" text-center>ข่าวหวยวันนี้</h1>
+  <ion-slides pager>
+    <ion-slide>
+      <ion-card style="text-align: center; border: 1px solid rgb(37, 155, 36);width: inherit;">
+        <img src="/assets/shapes.svg" />
+        <br>
+        <strong>ข่าว 1</strong>
+        <br>
+        <br>
+      </ion-card>
     </ion-slide>
-			<ion-slide>
-				<img src="/assets/shapes.svg" />
+    <ion-slide>
+      <img src="/assets/shapes.svg" />
     </ion-slide>
-				<ion-slide>
-					<img src="/assets/shapes.svg" />
+    <ion-slide>
+      <img src="/assets/shapes.svg" />
     </ion-slide>
-	</ion-slides>
-	<ion-grid>
-		<h1 class="ion-padding" text-center>แผงหวยวันนี้</h1>
-		<ion-row>
-			<ion-col size="6">
-				<ion-row>
-					<ion-col size="8">
-						<img src="/assets/shapes.svg" />
+  </ion-slides>
+  <ion-grid>
+    <h1 class="ion-padding" text-center>แผงหวยวันนี้</h1>
+    <ion-row>
+      <ion-col size="6">
+        <ion-row (click)="onClickDetail()" style="background-color: #ffff;">
+          <ion-col size="9">
+            <img src="/assets/lotto_number.jpg" style="height: 40px; width: fit-content"/>
           </ion-col>
-						<ion-col size="4">
-							<h1 style="margin-top: -1px">1</h1>
-						</ion-col>
-				</ion-row>
-			</ion-col>
-			<ion-col size="6">
-				<ion-row>
-					<ion-col size="8">
-						<img src="/assets/shapes.svg" />
+          <ion-col size="3" class="ion-text-center">
+            <div style="margin-top: 3px; border: 2px solid; height: 35px;">
+              <h1 style="font-size: 1.5rem; margin-top: 2px; color: #000">1</h1>
+              </div>
           </ion-col>
-						<ion-col size="4">
-							<h1 style="margin-top: -1px">1</h1>
-						</ion-col>
-				</ion-row>
-			</ion-col>
-		</ion-row>
-		<ion-row>
-			<ion-col size="6">
-				<ion-row>
-					<ion-col size="8">
-						<img src="/assets/shapes.svg" />
+        </ion-row>
+      </ion-col>
+      <ion-col size="6">
+        <ion-row (click)="onClickDetail()" style="background-color: #ffff;">
+          <ion-col size="9">
+            <img src="/assets/lotto_number.jpg" style="height: 40px; width: fit-content"/>
           </ion-col>
-						<ion-col size="4">
-							<h1 style="margin-top: -1px">1</h1>
-						</ion-col>
-				</ion-row>
-			</ion-col>
-			<ion-col size="6">
-				<ion-row>
-					<ion-col size="8">
-						<img src="/assets/shapes.svg" />
+          <ion-col size="3" class="ion-text-center">
+            <div style="margin-top: 3px; border: 2px solid; height: 35px;">
+              <h1 style="font-size: 1.5rem; margin-top: 2px; color: #000">1</h1>
+              </div>
           </ion-col>
-						<ion-col size="4">
-							<h1 style="margin-top: -1px">1</h1>
-						</ion-col>
-				</ion-row>
-			</ion-col>
-		</ion-row>
-		<ion-row>
-			<ion-col size="6">
-				<ion-row>
-					<ion-col size="8">
-						<img src="/assets/shapes.svg" />
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-row (click)="onClickDetail()" style="background-color: #ffff;">
+          <ion-col size="9">
+            <img src="/assets/lotto_number.jpg" style="height: 40px; width: fit-content"/>
           </ion-col>
-						<ion-col size="4">
-							<h1 style="margin-top: -1px">1</h1>
-						</ion-col>
-				</ion-row>
-			</ion-col>
-			<ion-col size="6">
-				<ion-row>
-					<ion-col size="8">
-						<img src="/assets/shapes.svg" />
+          <ion-col size="3" class="ion-text-center">
+            <div style="margin-top: 3px; border: 2px solid; height: 35px;">
+              <h1 style="font-size: 1.5rem; margin-top: 2px; color: #000">1</h1>
+              </div>
           </ion-col>
-						<ion-col size="4">
-							<h1 style="margin-top: -1px">1</h1>
-						</ion-col>
-				</ion-row>
-			</ion-col>
-		</ion-row>
-	</ion-grid>
+        </ion-row>
+      </ion-col>
+      <ion-col size="6">
+        <ion-row (click)="onClickDetail()" style="background-color: #ffff;">
+          <ion-col size="9">
+            <img src="/assets/lotto_number.jpg" style="height: 40px; width: fit-content"/>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center">
+            <div style="margin-top: 3px; border: 2px solid; height: 35px;">
+              <h1 style="font-size: 1.5rem; margin-top: 2px; color: #000">1</h1>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-row (click)="onClickDetail()" style="background-color: #ffff;">
+          <ion-col size="9">
+            <img src="/assets/lotto_number.jpg" style="height: 40px; width: fit-content"/>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center">
+            <div style="margin-top: 3px; border: 2px solid; height: 35px;">
+              <h1 style="font-size: 1.5rem; margin-top: 2px; color: #000">1</h1>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="6">
+        <ion-row (click)="onClickDetail()" style="background-color: #ffff;">
+          <ion-col size="9">
+            <img src="/assets/lotto_number.jpg" style="height: 40px; width: fit-content"/>
+          </ion-col>
+          <ion-col size="3" class="ion-text-center">
+            <div style="margin-top: 3px; border: 2px solid; height: 35px;">
+              <h1 style="font-size: 1.5rem; margin-top: 2px; color: #000">1</h1>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

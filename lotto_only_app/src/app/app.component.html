@@ -1,35 +1,43 @@
 <ion-app>
   <ion-split-pane contentId="menu-content">
-  <!--  our side menu  -->
-  <ion-menu contentId="menu-content">
-    <ion-header>
-      <ion-toolbar padding>
-        <ion-avatar>
-          <img src="/assets/shapes.svg" />
-        </ion-avatar>
-        <div text-center>
-        <p>นาย โชคดี มีเงินใช้</p>
-        <p><b>ID No.</b> : TH67A0001</p>
-        </div>
-        <div text-center>
-        <p><b>ระดับ</b> : อนุบาล</p>
-        <p><b>แต้มสะสม</b></p>
-        <p><b>231 คะแนน</b></p>
-        </div>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-        <ion-list>
+    <!--  our side menu  -->
+    <ion-menu contentId="menu-content">
+      <ion-header>
+        <ion-toolbar no-padding>
+          <div style="height: 150px; background-color: #65fd62;">
+            <ion-avatar>
+              <img src="/assets/shapes.svg" />
+            </ion-avatar>
+          </div>
+          <div text-center style="background-color: #40c731;">
+            <div style="padding: 10px;">
+              <p>นาย โชคดี มีเงินใช้</p>
+              <p><b>ID No.</b> : TH67A0001</p>
+            </div>
+          </div>
+          <div text-center style="background-color: #beffb6;">
+            <div style="padding: 10px;">
+              <p><b>ระดับ</b> : อนุบาล</p>
+              <p><b>แต้มสะสม</b></p>
+              <p><b>231 คะแนน</b></p>
+            </div>
+          </div>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content
+        style="--background: url(../../assets/bg/Lotonly_BG.png) 0 0/100% 100% no-repeat;"
+      >
+        <ion-list style="background: transparent;">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
-            <ion-item [routerLink]="p.url" routerDirection="forward">
-                   {{p.title}} 
-            </ion-item>
+            <ul [routerLink]="p.url" routerDirection="forward">
+              <li>{{ p.title }}</li>
+            </ul>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
-  </ion-menu>
+    </ion-menu>
 
-  <!-- the main content -->
-  <ion-router-outlet id="menu-content"></ion-router-outlet>
-</ion-split-pane>
+    <!-- the main content -->
+    <ion-router-outlet id="menu-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

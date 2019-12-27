@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url(../../assets/bg/Lotonly_BG.png) 0 0/100% 100% no-repeat;">
+  <div>
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      >คุณถูกรางวัลที่ 5</ion-button
+    >
+  </div>
+  <br>
+  <div padding text-center>
+    <img src="/assets/lotto_font.jpg" />
+    <div class="watermarked">
+      <h2 class="wt-text"><b>USER NAME</b></h2>
+    </div>
+    <br>
+    <br>
+    <img src="/assets/lotto_back.jpg" />
+    <div class="watermarked">
+      <h2 class="wt-text"><b>USER NAME</b> <br> 0999999999</h2>
+    </div>
+  </div>
+  
+</ion-content>
+<ion-footer>
+  <div>
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      (click)="onClickWithDraw()"
+      >ขึ้นเงินผ่านระบบ</ion-button
+    >
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      >จัดส่ง</ion-button
+    >
+  </div>
+</ion-footer>

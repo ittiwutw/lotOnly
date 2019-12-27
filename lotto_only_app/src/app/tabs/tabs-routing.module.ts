@@ -38,6 +38,86 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'lot-detail',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../lot-detail/lot-detail.module').then(m => m.LotDetailPageModule)
+          }
+        ]
+      },
+      {
+        path: 'history',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../history/history.module').then(m => m.HistoryPageModule)
+          }
+        ]
+      },
+      {
+        path: 'history-detail',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../history-detail/history-detail.module').then(m => m.HistoryDetailPageModule)
+          }
+        ]
+      },
+      {
+        path: 'withdraw',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../withdraw/withdraw.module').then(m => m.WithdrawPageModule)
+          }
+        ]
+      },
+      {
+        path: 'withdraw-status',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../withdraw-status/withdraw-status.module').then(m => m.WithdrawStatusPageModule)
+          }
+        ]
+      },
+      {
+        path: 'buy-complete',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../buy-complete/buy-complete.module').then(m => m.BuyCompletePageModule)
+          }
+        ]
+      },
+      {
+        path: 'profile',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../profile/profile.module').then(m => m.ProfilePageModule)
+          }
+        ]
+      },
+      {
+        path: 'upgrade',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../upgrade/upgrade.module').then(m => m.UpgradePageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

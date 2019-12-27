@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: url(../../assets/bg/Lotonly_BG.png) 0 0/100% 100% no-repeat;">
+  <div>
+    <ion-button size="large" type="submit" expand="block" color="primary"
+      >คุณถูกรางวัลที่ 5</ion-button
+    >
+  </div>
+  <br />
+  <div text-center>
+    <img src="/assets/lotto_number.jpg"/>
+  </div>
+  <br />
+  <div *ngIf="!isWithdraw">
+    <div text-center>
+      <p>จำนวนเงินรางวัล</p>
+      <h1>20,000 บาท</h1>
+    </div>
+    <br />
+    <div text-center>
+      <p>ค่าบริการ 2%</p>
+      <h1>400 บาท</h1>
+    </div>
+    <br />
+    <div text-center>
+      <p>เงินรางวัลคงเหลือ</p>
+      <h1 style="color: green">19,600 บาท</h1>
+    </div>
+  </div>
+  <div *ngIf="isWithdraw">
+    <div text-center>
+      <p>เงินรางวัลโอน</p>
+      <h1 style="color: green">19,600 บาท</h1>
+    </div>
+    <div>
+      <ion-list>
+        <ion-radio-group>
+          <ion-list-header>
+            <ion-label>เลือกช่องทางการโอน</ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-label>เลขบัญชีตามระบบ</ion-label>
+            <ion-radio slot="start" value="biff" checked></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>ช่องทางการโอนอื่น</ion-label>
+            <ion-radio slot="start" value="griff"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </div>
+    <div>
+      <ion-item>
+        <ion-label >บัญชีธนาคาร</ion-label>
+        <ion-input value="ธนาคาร กสิกรไทย"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>เลขบัญชี</ion-label>
+        <ion-input value="99999999"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-button size="large" type="submit" expand="block" color="primary" (click)="onClickWithDraw()" *ngIf="!isWithdraw"
+    >ขึ้นเงิน</ion-button
+  >
+  <ion-button size="large" type="submit" expand="block" color="primary" (click)="onClickConfirm()" *ngIf="isWithdraw"
+    >ยืนยัน</ion-button
+  >
+</ion-footer>

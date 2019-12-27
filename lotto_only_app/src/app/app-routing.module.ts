@@ -21,6 +21,34 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'lot-detail',
+    loadChildren: () => import('./lot-detail/lot-detail.module').then( m => m.LotDetailPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'history-detail',
+    loadChildren: () => import('./history-detail/history-detail.module').then( m => m.HistoryDetailPageModule)
+  },
+  {
+    path: 'withdraw',
+    loadChildren: () => import('./withdraw/withdraw.module').then( m => m.WithdrawPageModule)
+  },
+  {
+    path: 'withdraw-status',
+    loadChildren: () => import('./withdraw-status/withdraw-status.module').then( m => m.WithdrawStatusPageModule)
+  },
+  {
+    path: 'buy-complete',
+    loadChildren: () => import('./buy-complete/buy-complete.module').then( m => m.BuyCompletePageModule)
+  },
+  {
+    path: 'upgrade',
+    loadChildren: () => import('./upgrade/upgrade.module').then( m => m.UpgradePageModule)
   }
 ];
 @NgModule({

@@ -1,9 +1,74 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button><ion-icon name="create"></ion-icon> แก้ไขข้อมูล</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content style="--background: url(../../assets/bg/Lotonly_BG.png) 0 0/100% 100% no-repeat;">
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-avatar style="margin: auto; width: auto; height: auto;" padding>
+            <img
+              src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+            />
+          </ion-avatar>
+        </ion-col>
+        <ion-col size="6">
+          <div>
+            <p text-center style="color: green"><b>ข้อมูลผู้ใช้งาน</b></p>
+          </div>
+          <div>
+            <p><b>ชื่อ-นามสกุล: </b>นาย โชคดี มีเงิน</p>
+            <p><b>ID No.: </b>TH0001</p>
+            <p><b>เพศ: </b>ชาย <b> อายุ: </b> 32 ปี</p>
+            <p><b>โทรศัพท์: </b> 099-056-9599</p>
+            <p><b>ระดับ: </b> อนุบาล</p>
+            <p><b>แต้มสะสม: </b> 231 คะแนน</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div padding>
+    <ion-button
+      size="large"
+      type="submit"
+      expand="block"
+      color="primary"
+      (click)="onClickUpgrade()"
+      >อัพเกรดระดับสมาชิก</ion-button
+    >
+  </div>
+  <div padding>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>เลขบัญชีในระบบ</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>บัญชีธนาคาร</ion-label>
+        <ion-label>ธนาคาร กสิกรไทย</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>เลขบัญชี</ion-label>
+        <ion-label>9999999999</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+  <div padding>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>ที่อยู่สำหรับจัดส่ง</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <p>99/999 ต.ตำบล อ.เมือง จังหวัดกรุงเทพมหานคร 10202</p>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
